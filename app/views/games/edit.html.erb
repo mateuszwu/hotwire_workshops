@@ -1,0 +1,4 @@
+<div>
+  <%= link_to 'Destroy', game_path(@game), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+  <%= render partial: 'form', locals: { game: @game, header: 'Edit game' } %>
+</div>

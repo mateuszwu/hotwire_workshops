@@ -1,0 +1,25 @@
+<div class="h-full container mx-auto px-5 flex">
+  <div aria-label="group of cards" tabindex="0" class="focus:outline-none py-8 w-full overflow-auto mb-10">
+      <% @games.each do |game| %>
+        <div tabindex="0" aria-label="card 1"
+          class="focus:outline-none lg:w-4/12 lg:mr-7 lg:mb-0 mb-7 bg-white p-6 shadow rounded">
+          <div class="flex items-center border-b border-gray-200 pb-6">
+            <div class="flex items-start justify-between w-full">
+              <div class="pl-3 w-full">
+                <p tabindex="0" class="focus:outline-none text-xl font-medium leading-5 text-gray-800">
+                  <%= game.title %>
+                </p>
+                <p tabindex="0" class="focus:outline-none text-sm leading-normal pt-2 text-gray-500">
+                  X members
+                </p>
+              </div>
+              <%= link_to 'Join', '#', class: 'w-auto p-4 bg-gradient-to-tr from-blue-600 to-indigo-600 text-indigo-100 py-2 rounded-md text-lg tracking-wide' %>
+              <%if game.create_user_id == current_user.id %>
+                <%= link_to 'Edit', edit_game_path(game), class: 'w-auto p-4 bg-gradient-to-tr from-blue-600 to-indigo-600 text-indigo-100 py-2 rounded-md text-lg tracking-wide' %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>
