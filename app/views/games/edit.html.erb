@@ -1,4 +1,4 @@
 <div>
-  <%= link_to 'Destroy', game_path(@game), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+  <%= link_to 'Destroy', game_path(@game), class: 'w-auto p-4 bg-gradient-to-tr from-red-600 to-red-300 text-indigo-100 py-2 rounded-md text-lg tracking-wide', data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
   <%= render partial: 'form', locals: { game: @game, header: 'Edit game' } %>
 </div>
