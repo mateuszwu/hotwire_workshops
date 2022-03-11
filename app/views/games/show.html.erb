@@ -1,4 +1,4 @@
-<div class="flex flex-col h-full">
+<%= turbo_frame_tag @game, class: "flex flex-col h-full" do %>
   <div class="p-4 mh-4">
     <div class="text-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
       <%= @game.title %>
@@ -113,4 +113,4 @@
       </div>
     </div>
   </div>
-</div>
+<% end %>
